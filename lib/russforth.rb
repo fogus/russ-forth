@@ -1,4 +1,5 @@
 require 'pp'
+require 'dogestrings'
 
 module Verbs
 end
