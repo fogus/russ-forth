@@ -6,3 +6,6 @@ end
 module Adverbs
 end
 
+class Russforth
+  
+end
