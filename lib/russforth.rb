@@ -12,7 +12,10 @@ module Verbs
     @stack << @stack.last
   end
 
-  
+  ___ "x y -- y x"
+  def swap
+    @stack += [@stack.pop, @stack.pop]
+  end
 end
 
 module Adverbs
