@@ -1,7 +1,7 @@
 require 'pp'
 require 'dogestrings'
 
-module Verbs
+module Shufflers
   ___ "x -- "
   def drop
     @stack.pop
@@ -16,9 +16,6 @@ module Verbs
   def swap
     @stack += [@stack.pop, @stack.pop]
   end
-end
-
-module Adverbs
 end
 
 class Russforth
