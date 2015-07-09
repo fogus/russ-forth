@@ -19,5 +19,5 @@ module Shufflers
 end
 
 class Russforth
-  
+  include Shufflers
 end
