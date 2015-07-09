@@ -31,6 +31,3 @@ DEPENDENCIES
   dogestrings (~> 0.0.1)
   jeweler (~> 1.6.4)
   rspec (~> 3.3.0)
-
-BUNDLED WITH
-   1.10.5
