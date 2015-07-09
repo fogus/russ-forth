@@ -3,5 +3,5 @@ require 'dogestrings'
 require 'shufflers'
 
 class Russforth
-  include Shufflers
+  include Verbs::Shufflers
 end

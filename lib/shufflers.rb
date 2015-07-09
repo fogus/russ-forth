@@ -1,16 +1,20 @@
-module Shufflers
-  ___ "x -- "
-  def drop
-    @stack.pop
-  end
+require 'dogestrings'
 
-  ___ "x -- x x"
-  def dup
-    @stack << @stack.last
-  end
+module Verbs
+  module Shufflers
+    ___ "x -- "
+    def drop
+      @stack.pop
+    end
 
-  ___ "x y -- y x"
-  def swap
-    @stack += [@stack.pop, @stack.pop]
+    ___ "x -- x x"
+    def dup
+      @stack << @stack.last
+    end
+
+    ___ "x y -- y x"
+    def swap
+      @stack += [@stack.pop, @stack.pop]
+    end
   end
 end
