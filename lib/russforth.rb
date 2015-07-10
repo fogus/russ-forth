@@ -17,6 +17,8 @@ class Russforth
   def build_lexicon
     @lexicon.import_words_from Verbs::Shufflers, self
 
-    alias_word('?dup', 'qdup')
+    @lexicon.alias_word('?dup', 'qdup')
   end
+
+  
 end
