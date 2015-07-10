@@ -1,7 +1,6 @@
 class Reader
-  def initialize( i, o )
+  def initialize( i )
     @input = i
-    @output = o
   end
 
   def is_space?( ch )
