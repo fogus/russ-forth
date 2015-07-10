@@ -6,6 +6,14 @@ class Lexicon
   def initialize( &block )
     @entries = {}
   end
+
+  def define_word( name, &block )
+    @entries[name] = { :name => name, :block => block, :immediate => false }
+    self
+  end
+
+  
+  
 end
 
 class Russforth
