@@ -1,12 +1,15 @@
 require 'pp'
 require 'dogestrings'
-require_relative 'shufflers'
 require_relative 'lexicon'
 require_relative 'compiler'
 require_relative 'reader'
 
+require_relative 'shufflers'
+require_relative 'stack_ops'
+
 class Russforth
   include Verbs::Shufflers
+  include Verbs::StackOps
 
   def initialize( s_in = $stdin, s_out = $stdout )
     @s_in = s_in
@@ -20,8 +23,10 @@ class Russforth
 
   def build_lexicon
     @lexicon.import_words_from Verbs::Shufflers, self
+    @lexicon.import_words_from Verbs::StackOps, self
 
     @lexicon.alias_word('?dup', 'qdup')
+    @lexicon.alias_word('.', 'qdup')
   end
 
   def evaluate( word )
