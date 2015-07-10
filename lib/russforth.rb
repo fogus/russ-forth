@@ -1,7 +1,9 @@
 require 'pp'
 require 'dogestrings'
-require 'shufflers'
-require 'lexicon'
+require_relative 'shufflers'
+require_relative 'lexicon'
+require_relative 'compiler'
+require_relative 'reader'
 
 class Russforth
   include Verbs::Shufflers
@@ -29,8 +31,6 @@ class Russforth
       entry[:block].call
     else
       @s_out.puts "#{word} ??"
-    end
-      
     end
   end
 

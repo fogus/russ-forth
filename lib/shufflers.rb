@@ -18,7 +18,7 @@ module Verbs
     end
 
     ___ "x -- x x"
-    def q_dup
+    def qdup
       @stack << @stack.last unless @stack.last == 0 
     end
   end
