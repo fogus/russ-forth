@@ -5,4 +5,8 @@ require 'lexicon'
 
 class Russforth
   include Verbs::Shufflers
+
+  def initialize(   )
+    
+  end
 end
