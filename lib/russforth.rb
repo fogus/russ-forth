@@ -26,7 +26,7 @@ class Russforth
     @lexicon.import_words_from Verbs::StackOps, self
 
     @lexicon.alias_word('?dup', 'qdup')
-    @lexicon.alias_word('.', 'qdup')
+    @lexicon.alias_word('.', 'dot')
   end
 
   def evaluate( word )
