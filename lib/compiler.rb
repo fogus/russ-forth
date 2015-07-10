@@ -3,6 +3,19 @@ class Compiler
     @lexicon = lex
   end
 
+  def resolve_word( word )
+    return @lexicon[word] if @lexicon[word]
+
+    x = to_number(word)
+
+    if x
+      block = proc { @stack << x }
+      return { :name => word, :block => block, :immediate => false }
+    end
+
+    nil
+  end
+
   def compile_words( *words )
     blocks = []
 
