@@ -14,10 +14,11 @@ describe "Lexicon" do
   lexicon = Lexicon.new
   mock = RFMock.new( lexicon )
 
-  puts lexicon['dup'].to_s
-
-  it "is a thing" do
+  it "can be seeded" do
     expect(lexicon).to be_truthy
+    expect(lexicon['dup'][:name]).to eq "dup"
+    expect(lexicon['dup'][:immediate]).to be false
+    expect(lexicon['dup'][:block]).to be_truthy
   end
 end
 
