@@ -14,5 +14,6 @@ class Russforth
     build_lexicon
   end
 
-  
+  def build_lexicon
+  end
 end
