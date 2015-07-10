@@ -22,7 +22,16 @@ class Russforth
     @lexicon.alias_word('?dup', 'qdup')
   end
 
-  def evaluate( word )   
+  def evaluate( word )
+    entry = @compiler.resolve_word(word)
+
+    if entry
+      entry[:block].call
+    else
+      @s_out.puts "#{word} ??"
+    end
+      
+    end
   end
 
   def run
