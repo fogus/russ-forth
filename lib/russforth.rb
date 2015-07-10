@@ -12,7 +12,10 @@ class Lexicon
     self
   end
 
-  
+  def define_immediate_word( name, &block )
+    @entries[name] = { :name => name, :block => block, :immediate => true }
+    self
+  end
   
 end
 
