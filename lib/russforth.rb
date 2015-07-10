@@ -24,7 +24,10 @@ class Lexicon
     new_entry[:name] = name
     @entries[name] = entry
   end
-  
+
+  def []( name )
+    @entries[name]
+  end
 end
 
 class Russforth
