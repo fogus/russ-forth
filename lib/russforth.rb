@@ -15,6 +15,6 @@ class Russforth
   end
 
   def build_lexicon
-    @lexicon.import_words_from Verbs::Shufflers
+    @lexicon.import_words_from Verbs::Shufflers, self
   end
 end

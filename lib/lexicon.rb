@@ -25,9 +25,9 @@ class Lexicon
     @entries[name]
   end
 
-  def import_words_from( mod )
+  def import_words_from( mod, context )
     mod.public_instance_methods(false).each do |meth|
-      method_closure = method(meth.to_sym)
+      method_closure = context.method(meth.to_sym)
       define_word( meth.to_s, &method_closure )
     end  
   end
