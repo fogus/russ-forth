@@ -22,5 +22,15 @@ class Russforth
     @lexicon.alias_word('?dup', 'qdup')
   end
 
-  
+  def evaluate( word )   
+  end
+
+  def run
+    until $stdin.eof?
+      @s_out.flush
+      word = read_word
+      evaluate word
+    end
+  end
 end
+
