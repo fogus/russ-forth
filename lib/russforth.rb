@@ -10,7 +10,7 @@ class Russforth
     @s_in = s_in
     @s_out = s_out
     @lexicon = Lexicon.new
-    @reader = Reader.new( @s_in, @s_out )
+    @reader = Reader.new( @s_in )
     @compiler = Compiler.new( @lexicon )
     @stack = []
     build_lexicon
