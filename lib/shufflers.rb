@@ -16,5 +16,10 @@ module Verbs
     def swap
       @stack += [@stack.pop, @stack.pop]
     end
+
+    ___ "x -- x x"
+    def q_dup
+      @stack << @stack.last unless @stack.last == 0 
+    end
   end
 end
