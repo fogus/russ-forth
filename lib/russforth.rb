@@ -16,6 +16,14 @@ class Lexicon
     @entries[name] = { :name => name, :block => block, :immediate => true }
     self
   end
+
+  def alias_word( name, old_name )
+    entry = self[old_name]
+    raise "No such word #{old_name}" unless entry
+    new_entry = entry.dup
+    new_entry[:name] = name
+    @entries[name] = entry
+  end
   
 end
 
