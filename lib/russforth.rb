@@ -29,6 +29,7 @@ class Russforth
 
     @lexicon.alias_word('?dup', 'qdup')
     @lexicon.alias_word('.', 'dot')
+    @lexicon.alias_word('.S', 'dot_s')
   end
 
   def evaluate( word )
