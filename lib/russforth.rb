@@ -6,10 +6,12 @@ require_relative 'reader'
 
 require_relative 'shufflers'
 require_relative 'stack_ops'
+require_relative 'io'
 
 class Russforth
   include Verbs::Shufflers
   include Verbs::StackOps
+  include Verbs::Io
 
   def initialize( s_in = $stdin, s_out = $stdout )
     @s_in = s_in
