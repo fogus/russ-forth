@@ -7,7 +7,7 @@ module Verbs
     end
 
     def dot_s
-      @s_out.print( "#{@stack}\n" )
+      @s_out.print( "<-- #{@stack} -<-<\n" )
     end
   end
 end
