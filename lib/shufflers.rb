@@ -25,6 +25,13 @@ module Verbs
       @stack << b << a << c      
     end
 
+    ___ "x y -- x y x"
+    def over
+      a = @stack.pop
+      b = @stack.pop
+      @stack << b << a << b
+    end
+
     ___ "x -- x x"
     def qdup
       @stack << @stack.last unless @stack.last == 0 
