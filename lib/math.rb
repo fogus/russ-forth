@@ -15,5 +15,11 @@ module Math
       b = @stack.pop
       @stack << b - a
     end
+
+    def divide
+      a = @stack.pop
+      b = @stack.pop
+      @stack << b / a
+    end
   end
 end
