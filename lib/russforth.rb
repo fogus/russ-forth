@@ -7,11 +7,13 @@ require_relative 'reader'
 require_relative 'shufflers'
 require_relative 'stack_ops'
 require_relative 'io'
+require_relative 'math'
 
 class Russforth
   include Verbs::Shufflers
   include Verbs::StackOps
   include Verbs::Io
+  include Math::Arithmetic
 
   def initialize( s_in = $stdin, s_out = $stdout )
     @s_in = s_in
