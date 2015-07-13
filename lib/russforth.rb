@@ -29,6 +29,7 @@ class Russforth
     @lexicon.import_words_from Verbs::Shufflers, self
     @lexicon.import_words_from Verbs::StackOps, self
     @lexicon.import_words_from Verbs::Io, self
+    @lexicon.import_words_from Math::Arithmetic, self
 
     @lexicon.alias_word('?dup', 'qdup')
     @lexicon.alias_word( '+', 'plus' )
