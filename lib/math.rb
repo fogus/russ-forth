@@ -25,7 +25,13 @@ module Math
     def min
       a = @stack.pop
       b = @stack.pop
-      @stack << (a < b ? a : b)
+      @stack << (a <= b ? a : b)
+    end
+
+    def max
+      a = @stack.pop
+      b = @stack.pop
+      @stack << (a <= b ? b : a)
     end
   end
 end
