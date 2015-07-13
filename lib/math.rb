@@ -9,5 +9,11 @@ module Math
     def mult
       @stack << (@stack.pop * @stack.pop) 
     end
+
+    def subtract
+      a = @stack.pop
+      b = @stack.pop
+      @stack << b - a
+    end
   end
 end
