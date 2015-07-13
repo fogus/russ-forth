@@ -21,5 +21,11 @@ module Math
       b = @stack.pop
       @stack << b / a
     end
+
+    def min
+      a = @stack.pop
+      b = @stack.pop
+      @stack << (a < b ? a : b)
+    end
   end
 end
