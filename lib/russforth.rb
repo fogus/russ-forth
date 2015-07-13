@@ -31,6 +31,10 @@ class Russforth
     @lexicon.import_words_from Verbs::Io, self
 
     @lexicon.alias_word('?dup', 'qdup')
+    @lexicon.alias_word( '+', 'plus' )
+    @lexicon.alias_word( '*', 'mult' )
+    @lexicon.alias_word( '-', 'subtract' )
+    @lexicon.alias_word( '/', 'divide' )
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
   end
