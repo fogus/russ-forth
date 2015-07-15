@@ -38,6 +38,8 @@ class Russforth
     @lexicon.alias_word( '/', 'divide' )
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
+
+    @lexicon.define_word('bye') { exit }
   end
 
   def evaluate( word )
