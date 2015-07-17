@@ -1,3 +1,4 @@
 \\ Russ Forth core library
 
-65 emit
+72 emit 105 emit 33 emit
+cr cr
