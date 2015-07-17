@@ -4,12 +4,17 @@ Russforth is a teeny-tiny Forth implementation in Ruby.
 
 It currently supports the following:
 
- - Shuffling operators: `drop`, `dup`, `swap`, `rot`, `over`, `qdup`
- - Mathematical operators: `+`, `-`, `*`, `/`, `min`, `max`
- - Stack operators: `.`
- - I/O: `cr`, `.S`
+ - Shuffling words: `drop`, `dup`, `swap`, `rot`, `over`, `qdup`
+ - Mathematical words: `+`, `-`, `*`, `/`, `min`, `max`
+ - Stack words: `.`
+ - I/O words: `cr`, `.S` 
  
-In addition, Russforth allows user defined words via the `:` operator.
+In addition, Russforth allows user defined words via the `:` operator:
+
+   : sq dup * ;
+   2 sq
+   .
+   \\ 4
 
 More to come.
 
