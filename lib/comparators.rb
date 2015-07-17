@@ -15,5 +15,12 @@ module Verbs
 
       @stack << (lhs > rhs)
     end
+
+    def lt
+      rhs = @stack.pop
+      lhs = @stack.pop
+
+      @stack << (lhs < rhs)
+    end
   end
 end
