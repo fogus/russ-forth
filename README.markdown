@@ -16,6 +16,12 @@ In addition, Russforth allows user defined words via the `:` operator:
    .
    \\ 4
 
+Things that I would like to add:
+
+ - User-defined immediate words
+ - Return stack
+ - A standard lib
+
 More to come.
 
 ## License
