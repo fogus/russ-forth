@@ -7,7 +7,7 @@ It currently supports the following:
  - Shuffling words: `drop`, `dup`, `swap`, `rot`, `over`, `qdup`
  - Mathematical words: `+`, `-`, `*`, `/`, `min`, `max`
  - Stack words: `.`
- - I/O words: `cr`, `.S` 
+ - I/O words: `emit`, `cr`, `.S` 
  
 In addition, Russforth allows user defined words via the `:` operator:
 
