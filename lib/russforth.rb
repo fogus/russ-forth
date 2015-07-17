@@ -53,13 +53,16 @@ class Russforth
   end
 
   def read_and_define_word
-    name = read_word
+    name = @reader.read_word
     words = []
-    while (word = read_word)
+
+    while (word = @reader.read_word)
       break if word == ';'
       words << word
     end
-    @dictionary.word(name, &compile_words( *words ))
+
+    p = @compiler.compile_words(*words)
+    @dictionary.define_word(name, &p)
   end
 
   def resolve_word( word )
