@@ -62,7 +62,7 @@ class Russforth
       words << word
     end
 
-    p = @compiler.compile_words(*words)
+    p = @compiler.compile_words(self, *words)
     @dictionary.define_word(name, &p)
   end
 
