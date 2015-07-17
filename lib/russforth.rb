@@ -39,6 +39,7 @@ class Russforth
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
 
+    @lexicon.define_word(':') { read_and_define_word }
     @lexicon.define_word('bye') { exit }
   end
 
