@@ -15,7 +15,7 @@ In addition, Russforth allows user defined words via the `:` operator:
     : sq dup * ;
     2 sq
     .
-    \ 4
+    \ prints 4
 
 Things that I would like to add:
 
