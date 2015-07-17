@@ -102,3 +102,4 @@ class Russforth
   end
 end
 
+Russforth.new.run
