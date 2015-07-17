@@ -9,6 +9,13 @@ module Verbs
       @stack << (a == b)
     end
 
+    def noteq
+      a = @stack.pop
+      b = @stack.pop
+
+      @stack << (a != b)
+    end
+
     def gt
       rhs = @stack.pop
       lhs = @stack.pop

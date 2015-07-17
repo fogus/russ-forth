@@ -35,14 +35,15 @@ class Russforth
     @lexicon.import_words_from Verbs::Comparators, self
 
     @lexicon.alias_word('?dup', 'qdup')
-    @lexicon.alias_word( '+', 'plus' )
-    @lexicon.alias_word( '*', 'mult' )
-    @lexicon.alias_word( '-', 'subtract' )
-    @lexicon.alias_word( '/', 'divide' )
+    @lexicon.alias_word('+', 'plus')
+    @lexicon.alias_word('*', 'mult')
+    @lexicon.alias_word('-', 'subtract')
+    @lexicon.alias_word('/', 'divide')
 
-    @lexicon.alias_word( '=', 'eq' )
-    @lexicon.alias_word( '>', 'gt' )
-    @lexicon.alias_word( '<', 'lt' )
+    @lexicon.alias_word('=', 'eq')
+    @lexicon.alias_word('<>', 'noteq')
+    @lexicon.alias_word('>', 'gt')
+    @lexicon.alias_word('<', 'lt')
 
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
