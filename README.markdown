@@ -23,7 +23,7 @@ Things that I would like to add:
  - Return stack
  - `( ... )` style comments
  - A standard lib
- - A more robust interactive prompt
+ - A more robust interactive prompt and script slurping
  - Navigable lexicon 
  - Richer types
 
