@@ -8,14 +8,14 @@ It currently supports the following:
  - Mathematical words: `+`, `-`, `*`, `/`, `min`, `max`
  - Stack words: `.`
  - I/O words: `emit`, `cr`, `.S` 
- - Comments: Skip lines via `\\`
+ - Comments: Skip lines via `\`
  
 In addition, Russforth allows user defined words via the `:` operator:
 
-   : sq dup * ;
-   2 sq
-   .
-   \\ 4
+    : sq dup * ;
+    2 sq
+    .
+    \ 4
 
 Things that I would like to add:
 
