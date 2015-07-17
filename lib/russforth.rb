@@ -8,12 +8,14 @@ require_relative 'shufflers'
 require_relative 'stack_ops'
 require_relative 'io'
 require_relative 'math'
+require_relative 'comparators'
 
 class Russforth
   include Verbs::Shufflers
   include Verbs::StackOps
   include Verbs::Io
   include Math::Arithmetic
+  include Verbs::Comparators
 
   def initialize( s_in = $stdin, s_out = $stdout )
     @s_in = s_in
@@ -30,12 +32,16 @@ class Russforth
     @lexicon.import_words_from Verbs::StackOps, self
     @lexicon.import_words_from Verbs::Io, self
     @lexicon.import_words_from Math::Arithmetic, self
+    @lexicon.import_words_from Verbs::Comparators, self
 
     @lexicon.alias_word('?dup', 'qdup')
     @lexicon.alias_word( '+', 'plus' )
     @lexicon.alias_word( '*', 'mult' )
     @lexicon.alias_word( '-', 'subtract' )
     @lexicon.alias_word( '/', 'divide' )
+
+    @lexicon.alias_word( '=', 'eq' )
+
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
 
