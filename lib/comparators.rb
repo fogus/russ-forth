@@ -8,5 +8,12 @@ module Verbs
 
       @stack << (a == b)
     end
+
+    def gt
+      rhs = @stack.pop
+      lhs = @stack.pop
+
+      @stack << (lhs > rhs)
+    end
   end
 end

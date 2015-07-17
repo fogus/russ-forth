@@ -41,6 +41,7 @@ class Russforth
     @lexicon.alias_word( '/', 'divide' )
 
     @lexicon.alias_word( '=', 'eq' )
+    @lexicon.alias_word( '>', 'gt' )
 
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
