@@ -20,9 +20,20 @@ Things that I would like to add:
 
  - User-defined immediate words
  - Return stack
+ - `( ... )` style comments
  - A standard lib
+ - A more robust interactive prompt
+ - Navigable lexicon 
+ - Richer types
 
 More to come.
+
+## References and inspirations
+
+ - *Starting Forth* by Leo Brodie
+ - *Thinking Forth* by Leo Brodie
+ - *Object-oriented Forth* by Dick Pountain
+ - *Scientific Forth* by Noble
 
 ## License
 
