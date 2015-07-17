@@ -63,7 +63,7 @@ class Russforth
     end
 
     p = @compiler.compile_words(self, *words)
-    @dictionary.define_word(name, &p)
+    @lexicon.define_word(name, &p)
   end
 
   def resolve_word( word )
