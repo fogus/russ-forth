@@ -41,6 +41,8 @@ class Russforth
 
     @lexicon.define_word(':') { read_and_define_word }
     @lexicon.define_word('bye') { exit }
+
+    @lexicon.define_immediate_word( '\\' ) { @s_in.readline }
   end
 
   def evaluate( word )
