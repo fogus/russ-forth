@@ -20,6 +20,7 @@ In addition, Russforth allows user defined words via the `:` operator:
 Things that I would like to add:
 
  - Add symbol and string types
+ - Combinators
  - User-defined immediate words
  - Return stack
  - `( ... )` style comments
