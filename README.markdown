@@ -26,7 +26,7 @@ Things that I would like to add:
  - A more robust interactive prompt and script slurping
  - Navigable lexicon 
  - Richer types
- - Ruby interop (repurposing `!`, `@`, etc.
+ - Ruby interop (repurposing `!`, `@`, etc. and introducing `#name`, `.name`, `new`
 
 More to come.
 
