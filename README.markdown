@@ -26,6 +26,7 @@ Things that I would like to add:
  - A more robust interactive prompt and script slurping
  - Navigable lexicon 
  - Richer types
+ - Ruby interop
 
 More to come.
 
