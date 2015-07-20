@@ -26,6 +26,14 @@ module Math
       @stack << (@stack.pop.abs) 
     end
 
+    def inc
+      @stack << (@stack.pop + 1) 
+    end
+
+    def dec
+      @stack << (@stack.pop - 1) 
+    end
+
     def min
       a = @stack.pop
       b = @stack.pop
