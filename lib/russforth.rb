@@ -80,7 +80,11 @@ class Russforth
   def resolve_word( word )
     return @lexicon[word] if @lexicon[word]
 
-    x = to_number(word)
+    if word[0,1] == ":"
+      x = word[1..-1].to_sym
+    else
+      x = to_number(word)
+    end
 
     if x
       block = proc { @stack << x }
