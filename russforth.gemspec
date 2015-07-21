@@ -3,7 +3,7 @@ require File.expand_path('../lib/russforth/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name = 'russforth'
-  gem.description = %q{Hardcore docstrings for Ruby.}
+  gem.description = %q{A teeny-tiny Forth in Ruby.}
   gem.authors = ['Fogus']
   gem.email = ['me-at-fogus-dot-me']
 

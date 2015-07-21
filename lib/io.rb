@@ -9,5 +9,9 @@ module Verbs
     def dot_s
       @s_out.print( ">->- #{@stack} -->\n" )
     end
+
+    def emit
+      @s_out.print( @stack.last.chr )
+    end
   end
 end

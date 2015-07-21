@@ -8,12 +8,14 @@ require_relative 'shufflers'
 require_relative 'stack_ops'
 require_relative 'io'
 require_relative 'math'
+require_relative 'comparators'
 
 class Russforth
   include Verbs::Shufflers
   include Verbs::StackOps
   include Verbs::Io
   include Math::Arithmetic
+  include Verbs::Comparators
 
   def initialize( s_in = $stdin, s_out = $stdout )
     @s_in = s_in
@@ -30,16 +32,26 @@ class Russforth
     @lexicon.import_words_from Verbs::StackOps, self
     @lexicon.import_words_from Verbs::Io, self
     @lexicon.import_words_from Math::Arithmetic, self
+    @lexicon.import_words_from Verbs::Comparators, self
 
     @lexicon.alias_word('?dup', 'qdup')
-    @lexicon.alias_word( '+', 'plus' )
-    @lexicon.alias_word( '*', 'mult' )
-    @lexicon.alias_word( '-', 'subtract' )
-    @lexicon.alias_word( '/', 'divide' )
+    @lexicon.alias_word('+', 'plus')
+    @lexicon.alias_word('*', 'mult')
+    @lexicon.alias_word('-', 'subtract')
+    @lexicon.alias_word('/', 'divide')
+
+    @lexicon.alias_word('=', 'eq')
+    @lexicon.alias_word('<>', 'noteq')
+    @lexicon.alias_word('>', 'gt')
+    @lexicon.alias_word('<', 'lt')
+
     @lexicon.alias_word('.', 'dot')
     @lexicon.alias_word('.S', 'dot_s')
 
+    @lexicon.define_word(':') { read_and_define_word }
     @lexicon.define_word('bye') { exit }
+
+    @lexicon.define_immediate_word( '\\' ) { @s_in.readline }
   end
 
   def evaluate( word )
@@ -52,10 +64,27 @@ class Russforth
     end
   end
 
+  def read_and_define_word
+    name = @reader.read_word
+    words = []
+
+    while (word = @reader.read_word)
+      break if word == ';'
+      words << word
+    end
+
+    p = @compiler.compile_words(self, *words)
+    @lexicon.define_word(name, &p)
+  end
+
   def resolve_word( word )
     return @lexicon[word] if @lexicon[word]
 
-    x = to_number(word)
+    if word[0,1] == ":"
+      x = word[1..-1].to_sym
+    else
+      x = to_number(word)
+    end
 
     if x
       block = proc { @stack << x }
@@ -88,3 +117,4 @@ class Russforth
   end
 end
 
+Russforth.new.run
