@@ -20,6 +20,7 @@ In addition, Russforth allows user defined words via the `:` operator:
 Things that I would like to add:
 
  - `if` ... `then`
+ - Literal Blocks (i.e. `[pop dup *]`)
  - Add string type
  - Combinators
  - User-defined immediate words
