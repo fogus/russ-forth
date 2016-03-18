@@ -19,17 +19,17 @@ module Verbs
 
     ___ "x y z -- y z x"
     def rot 
-      a = @stack.pop
-      b = @stack.pop
-      c = @stack.pop
-      @stack << b << a << c      
+      top = @stack.pop
+      mid = @stack.pop
+      lst = @stack.pop
+      @stack += [mid, top, lst]
     end
 
     ___ "x y -- x y x"
     def over
-      a = @stack.pop
-      b = @stack.pop
-      @stack << b << a << b
+      top = @stack.pop
+      und = @stack.pop
+      @stack += [und, top, und]
     end
 
     ___ "x -- x x"
