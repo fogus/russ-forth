@@ -2,3 +2,9 @@
 
 72 emit 105 emit 33 emit
 cr cr
+
+: apply2 rot dup rot dip rot apply swap ;
+
+: sip over swap dip ;
+
+
