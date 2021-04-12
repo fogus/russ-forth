@@ -2,6 +2,8 @@
 
 Russforth is a teeny-tiny Forth implementation in Ruby.
 
+*a nicer small-forth is [SallyForth](https://github.com/russolsen/sallyforth) by Russ Olsen*
+
 It currently supports the following:
 
  - Shuffling words: `drop`, `dup`, `swap`, `rot`, `over`, `qdup`
